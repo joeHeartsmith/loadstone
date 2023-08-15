@@ -10,3 +10,4 @@ _Goals:_
 - Create basic functions to provision IaaS services
 - Enable peering within and between each provider
 - Integrate with a visual editor (i.e. produce a single YAML/JSON ingest it here)
+- Get some more advanced features working (like importing serverless compute code)
