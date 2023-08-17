@@ -27,6 +27,12 @@ except:
     locallibs[oci] = False
 
 
+get_infrax_info = {aws: aws_locallib.get_infrax_info, azure:None, gcp:None, oci:None}
 test_createvpc = {aws: aws_locallib.test_createvpc, azure:None, gcp:None, oci:None}
+test_deletevpc = {aws: aws_locallib.test_deletevpc, azure:None, gcp:None, oci:None}
 
-test_createvpc[aws](None)
+
+#test_createvpc[aws]("192.168.0.1/24")
+test_deletevpc[aws]("vpc-01f82bce79f67d855")
+get_infrax_info[aws]()
+
