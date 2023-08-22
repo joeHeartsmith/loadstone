@@ -1,13 +1,30 @@
 pip install --upgrade pip
 
+
 pip install boto3
+create ~/.aws/config and ~/.aws/credentials
+
 
 pip install azure-identity azure-mgmt-compute azure-mgmt-storage azure-mgmt-resource azure-keyvault-secrets azure-storage-blob azure-mgmt-core azure-mgmt-apimanagement azure-mgmt-authorization
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+az login
+az account subscription list
+export AZURE_SUBSCRIPTION_ID=[UUID]
+
 
 pip install google-cloud
+sudo apt-get install apt-transport-https ca-certificates gnupg curl sudo
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+sudo apt-get update && sudo apt-get install google-cloud-cli
+gcloud init
+(go set GCP roles/iam.serviceAccountTokenCreator on service account)
+gcloud config set auth/impersonate_service_account ls-test@loadstone-testing.iam.gserviceaccount.com
+gcloud storage buckets list --impersonate-service-account=ls-test@loadstone-testing.iam.gserviceaccount.com
+
 
 apt install python3-dev libffi-dev rustc
 pip install oci
 
-pip install requests megalib
 
+pip install requests megalib
