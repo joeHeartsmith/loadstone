@@ -1,0 +1,13 @@
+pip install --upgrade pip
+
+pip install boto3
+
+pip install azure-identity azure-mgmt-compute azure-mgmt-storage azure-mgmt-resource azure-keyvault-secrets azure-storage-blob azure-mgmt-core azure-mgmt-apimanagement azure-mgmt-authorization
+
+pip install google-cloud
+
+apt install python3-dev libffi-dev rustc
+pip install oci
+
+pip install requests megalib
+
